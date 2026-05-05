@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100%;
+            min-height: 100vh;
+            background-color: lightskyblue;
+        }
+        form{
+            width: 450px;
+            margin-left: 20px;
+            border: 2px solid;
+            border-radius: 15px;
+            background-color :white;
+        }
+        label{
+            margin-left: 10px;
+        }
+        input{
+            margin: 5px;
+            width: 400px;
+            height: 30px;
+            margin-left: 10px;
+        }
+        textarea{
+            width: 400px;
+            margin-left: 10px;
+        }
+        .btn1{
+            text-align: center;
+            margin: 5px 5px 5px 5px;
+        }
+        .btn1 button{
+            width: 120px;
+            height: 40px;
+            background-color: orangered;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+</head>
+<body>
+    <form id="Delivery Form" onsubmit="return submitForm()">
+        <H1>Delivery Form</H1>
+        <label for="Name">NAME: <input type="text" id="name" required></label> <br>
+        <label for="Contact">CONTACT :<input type="tel" id="contact" required></label>
+        <label for="Email address">EMAIL ADDRESS :<input type="email address" id="email address" required></label><br>
+        <label for="Location">LOCATION : <input type="text" id="Location"required></label>
+        <Label>Description</Label><br>
+        <textarea id="service" cols="30" rows="10" required></textarea><br>
+        <div class="btn1">
+            <button type="submit">SUBMIT</button>
+        </div>
+    </form>
+    <script>
+        function submitForm() {
+            
+            if (document.getElementById('name').value === '' || 
+                document.getElementById('contact').value === '' ||
+                document.getElementById('email address').value === '' ||
+                document.getElementById('Location').value === '' ||
+                document.getElementById('service').value === '') {
+                alert('Please fill in all the fields.');
+                return false;
+            } else {
+                
+                var successWindow = window.open('', '_blank');
+                successWindow.document.write('<h1>Thank You for Choosing And Utilizing Our Online Services!</h1>');
+                return false; 
+            }
+        }
+    </script>
+   
+</body>
+</html>
+
+    
